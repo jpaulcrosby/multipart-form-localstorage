@@ -24,7 +24,7 @@ $(document).ready(function(){
 	if (window.location.pathname == "/Users/PaulCrosby/Desktop/git%20repos/multipart-form-localstorage/multipart-form-localstorage/serialized-data.html" && localStorage.getItem("flag") == "set") {
 		
 			for (var i = 0; i <= localStorage.length; i++) {
-				$("#showLocalstorage").append("<h1>" + window.localStorage.key(i) + ": " + window.localStorage.value(i) + "</h1>");
+				$("#showLocalstorage").append("<h1>" + window.localStorage.key(i) + ": " + window.localStorage.getItem(localStorage.key(i)) + "</h1>");
 			}
 		
 	};
