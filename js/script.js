@@ -23,9 +23,17 @@ $(document).ready(function(){
 		}
 	if (window.location.pathname == "/Users/PaulCrosby/Desktop/git%20repos/multipart-form-localstorage/multipart-form-localstorage/serialized-data.html" && localStorage.getItem("flag") == "set") {
 		
-			for (var i = 0; i <= localStorage.length; i++) {
-				$("#showLocalstorage").append("<h1>" + window.localStorage.key(i) + ": " + window.localStorage.getItem(localStorage.key(i)) + "</h1>");
+			for (var i = 0; i <= 16; i++) {
+				if(window.localStorage.key(i).search("2") == -1 && window.localStorage.key(i) != "flag") {
+					$("#person1").append("<tr><td>" + window.localStorage.key(i) + "</td><td>" + window.localStorage.getItem(localStorage.key(i)) + "</td></tr>");
+				}
 			}
-		
+			
+			for (var i = 0; i <= 16; i++) {
+				if(window.localStorage.key(i).search("2") != -1 && window.localStorage.key(i) != "flag") {
+					$("#person2").append("<tr><td>" + window.localStorage.key(i) + "</td><td>" + window.localStorage.getItem(localStorage.key(i)) + "</td></tr>");
+				}
+			}
+								
 	};
 });
